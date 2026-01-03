@@ -7,37 +7,25 @@
   <title>Vitae — Emotional Awareness, Made Simple</title>
   <meta name="description" content="Vitae helps you build emotional awareness with journaling, guided meditation experiences, and an optional AI assistant for reflection." />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Vitae — Emotional Awareness, Made Simple" />
   <meta property="og:description" content="Journal, meditate, and reflect with an optional AI assistant. Calm tools for real life." />
   <meta property="og:type" content="website" />
-  <!-- Optional if you add a banner later:
-  <meta property="og:image" content="https://your-site/assets/og.png" />
-  -->
 
   <style>
     :root{
       --bg0:#040806;
-      --bg1:#070f0b;
       --bg2:#0b1711;
-
       --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
       --stroke: rgba(255,255,255,.10);
-
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.68);
       --muted2: rgba(255,255,255,.52);
-
-      --accent:#39d98a;   /* mint */
-      --accent2:#2aa66c;  /* deep mint */
-
+      --accent:#39d98a;
+      --accent2:#2aa66c;
       --shadow: 0 22px 90px rgba(0,0,0,.55);
       --shadow2: 0 14px 60px rgba(0,0,0,.38);
-
       --r: 20px;
       --r2: 28px;
-
       --max: 1100px;
     }
 
@@ -58,15 +46,11 @@
     a{ color:inherit }
     .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 70px }
 
-    /* Top nav */
     .nav{
       display:flex; align-items:center; justify-content:space-between;
       gap:14px; padding:10px 4px 24px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      text-decoration:none;
-    }
+    .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
     .orb{
       width:40px; height:40px; border-radius:999px;
       background:
@@ -82,9 +66,7 @@
     .brandTitle strong{ font-size:16px; letter-spacing:.7px }
     .brandTitle span{ font-size:12px; color:var(--muted2); font-weight:700; margin-top:2px }
 
-    .navlinks{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-    }
+    .navlinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .chip{
       text-decoration:none;
       padding:10px 12px;
@@ -98,7 +80,6 @@
     }
     .chip:hover{ transform: translateY(-1px); background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.14) }
 
-    /* Hero */
     .hero{
       border-radius:var(--r2);
       background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.03));
@@ -117,25 +98,15 @@
       pointer-events:none;
     }
 
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      align-items:center;
-    }
-    @media (max-width: 900px){
-      .heroGrid{ grid-template-columns:1fr }
-    }
-
     .hTitle{
       margin:0;
       font-size:46px;
       line-height:1.02;
       letter-spacing:-.8px;
+      max-width: 22ch;
     }
-    @media (max-width: 600px){
-      .hTitle{ font-size:36px; }
-    }
+    @media (max-width: 600px){ .hTitle{ font-size:36px; } }
+
     .hSub{
       margin:12px 0 0;
       color:var(--muted);
@@ -158,11 +129,6 @@
       transition: transform .12s ease, background .12s ease, border-color .12s ease;
     }
     .btn:hover{ transform: translateY(-1px); background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.16) }
-    .btnPrimary{
-      background: linear-gradient(180deg, rgba(57,217,138,.95), rgba(42,166,108,.90));
-      color:#05110a;
-      border-color: rgba(57,217,138,.55);
-    }
 
     .meta{
       margin-top:12px;
@@ -173,57 +139,9 @@
     }
     .dot{ opacity:.35 }
 
-    /* Phone mock */
-    .phone{
-      border-radius: 32px;
-      border: 1px solid rgba(255,255,255,.12);
-      background:
-        radial-gradient(circle at 30% 20%, rgba(57,217,138,.18), rgba(0,0,0,.45) 55%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      box-shadow: 0 22px 90px rgba(0,0,0,.52);
-      padding:16px;
-      position:relative;
-    }
-    .phone::after{
-      content:"";
-      position:absolute; inset:10px;
-      border-radius:26px;
-      border:1px solid rgba(255,255,255,.08);
-      pointer-events:none;
-    }
-    .screen{
-      border-radius:24px;
-      background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.65));
-      border:1px solid rgba(255,255,255,.08);
-      overflow:hidden;
-      min-height:360px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:18px;
-    }
-    .screen p{
-      margin:0;
-      color:rgba(255,255,255,.78);
-      font-weight:850;
-      line-height:1.4;
-    }
-    .screen small{
-      display:block;
-      margin-top:10px;
-      color:var(--muted2);
-      font-weight:800;
-      font-size:12px;
-    }
-
-    /* Sections */
     .section{ margin-top:18px }
-    .sectionHeader{
-      margin:0 0 10px;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
+    .sectionHeader{ margin:0 0 10px; font-size:18px; letter-spacing:.2px; }
+
     .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -238,17 +156,8 @@
       box-shadow: var(--shadow2);
       padding:18px;
     }
-    .card h3{
-      margin:0 0 10px;
-      font-size:16px;
-      letter-spacing:.2px;
-    }
-    .card p, .card li{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.6;
-    }
+    .card h3{ margin:0 0 10px; font-size:16px; letter-spacing:.2px; }
+    .card p, .card li{ margin:0; color:var(--muted); font-size:14px; line-height:1.6; }
     .card ul{ margin:10px 0 0; padding-left:18px }
 
     .badge{
@@ -265,8 +174,9 @@
       margin-top:10px;
       word-break:break-word;
     }
+    .badge a{ color: rgba(57,217,138,.95); text-decoration:none; font-weight:950 }
+    .badge a:hover{ opacity:.92 }
 
-    /* FAQ */
     details{
       border-radius:16px;
       background: rgba(255,255,255,.05);
@@ -287,9 +197,8 @@
     }
     summary::-webkit-details-marker{ display:none }
     summary .chev{ opacity:.55 }
-    details p{ margin:10px 0 0 }
+    details p{ margin:10px 0 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
 
-    /* Footer */
     footer{
       margin-top:18px;
       padding:18px 2px 0;
@@ -326,34 +235,28 @@
         <a class="chip" href="#features">Features</a>
         <a class="chip" href="#how">How it works</a>
         <a class="chip" href="#faq">FAQ</a>
-        <a class="chip" href="/support/">Support</a>
+        <a class="chip" href="https://vihaandas.github.io/VitaeWeb/">Support</a>
       </nav>
     </header>
 
     <section class="hero" id="top">
-      <div class="heroGrid">
-        <div>
-          <h1 class="hTitle">A calmer way to notice what you feel.</h1>
-          <p class="hSub">
-            Vitae helps you build emotional awareness with quick journaling, guided meditation experiences,
-            and an optional AI Assistant for reflection — so you can reset, refocus, and move forward.
-          </p>
+      <h1 class="hTitle">A calmer way to notice what you feel.</h1>
+      <p class="hSub">
+        Vitae helps you build emotional awareness with quick journaling, guided meditation experiences,
+        and an optional AI Assistant for reflection — so you can reset, refocus, and move forward.
+      </p>
 
-          <div class="ctaRow">
-            <!-- Replace with your App Store link once live -->
-            <a class="btn btnPrimary" href="#" onclick="return false;">Get Vitae (App Store)</a>
-            <a class="btn" href="#features">See features</a>
-            <a class="btn" href="mailto:vitae.contact.app@gmail.com?subject=Vitae%20Support">Contact</a>
-          </div>
+      <div class="ctaRow">
+        <a class="btn" href="#features">See features</a>
+        <a class="btn" href="mailto:vitae.contact.app@gmail.com?subject=Vitae%20Support">Contact</a>
+      </div>
 
-          <div class="meta">
-            <span>Journal • Meditation • Optional AI Assistant</span>
-            <span class="dot">•</span>
-            <span>Designed for reflection, not medical advice</span>
-          </div>
-        </div>
-
-      
+      <div class="meta">
+        <span>Journal • Meditation • Optional AI Assistant</span>
+        <span class="dot">•</span>
+        <span>Designed for reflection, not medical advice</span>
+      </div>
+    </section>
 
     <section class="section" id="features">
       <h2 class="sectionHeader">Features</h2>
@@ -404,7 +307,9 @@
         <div class="card">
           <h3>Transparent policy</h3>
           <p>Read the privacy policy anytime. No vague wording.</p>
-          <div class="badge"><a href="/privacy/" style="color:rgba(57,217,138,.95); text-decoration:none;">View Privacy Policy →</a></div>
+          <div class="badge">
+            <a href="https://vihaandas.github.io/VitaePrivacy/">View Privacy Policy →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -424,15 +329,21 @@
 
       <details>
         <summary>Where can I get support? <span class="chev">⌄</span></summary>
-        <p>Visit <a href="/support/" style="color:rgba(57,217,138,.95); font-weight:900; text-decoration:none;">Support</a> or email <strong>vitae.contact.app@gmail.com</strong>.</p>
+        <p>
+          Visit
+          <a href="https://vihaandas.github.io/VitaeWeb/" style="color:rgba(57,217,138,.95); font-weight:950; text-decoration:none;">
+            Support
+          </a>
+          or email <strong>vitae.contact.app@gmail.com</strong>.
+        </p>
       </details>
     </section>
 
     <footer>
       <div>© <span id="year"></span> Vitae</div>
       <div class="footerLinks">
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
+        <a href="https://vihaandas.github.io/VitaeWeb/">Support</a>
+        <a href="https://vihaandas.github.io/VitaePrivacy/">Privacy</a>
         <a href="mailto:vitae.contact.app@gmail.com?subject=Vitae%20Support">Contact</a>
       </div>
     </footer>
